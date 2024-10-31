@@ -1,0 +1,287 @@
+html{
+    background-color: #EDEDED;
+}
+
+.tudo{
+    background-color: #EDEDED;
+}
+
+.cardHome{
+    flex: 2;
+    background-color: #fff;
+    border-radius: .625rem;
+    padding: 24px;
+    margin: 0px 20px 24px;
+    max-width: 1150px;
+}
+
+.cardavisos{
+    flex: 1;
+    background-color: #fff;
+    border-radius: .625rem;
+    max-width: 300px;
+}
+
+.card-pad{
+    padding: 16px;
+}
+
+.card-detalhes{
+    padding: 0px 18px 18px 18px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 400px;
+}
+
+thead{
+    color: #00adff;
+    border-bottom: 1px solid #f2f3f4;
+}
+
+th, td {
+    padding: 11px 9px;
+    text-align: left;
+}
+
+td{
+    font-size: 14px;
+}
+
+thead th{
+    font-size: .875rem;
+    cursor: default;    
+}
+
+tbody{
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+
+tbody tr{
+    border-bottom: 1px solid #ffffff;
+}
+
+.div-img{
+    display: flex;
+    flex-direction: row;
+    width: 30px;
+    padding-top: 5px;
+    padding-left: 8px;
+    gap: 3px;
+}
+
+.clicavel{
+    cursor: pointer;
+}
+
+.outer1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px; 
+  margin-top: 20px;
+}
+
+.outer {
+    max-width: 1300px;  
+}
+
+
+.detalhe {
+    margin-left: 30px;
+    font-weight: 500;
+}
+  
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ul{
+    padding: 0;
+    margin: 0;
+    background-color: #f2f3f4;
+    padding: 8px;
+    margin: .0625rem 0;
+    border-radius: 5px;
+    color:  #484848;
+    transition: .2s ease all;
+
+}
+  
+.caret {
+    cursor: pointer;
+    user-select: none;
+    margin: 0;
+}
+  
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+}
+  
+.caret-down::before {
+    transform: rotate(90deg);
+}
+  
+.nested {
+    padding: 0;
+    display: none;
+}
+  
+.active {
+    display: block;
+}
+
+.crud {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: auto; 
+    max-width: 270px; 
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.crud:hover{
+    background-color: #e9e9e9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+li {
+    display: block; 
+}
+
+
+.avisos-container {
+    margin-right: 40px;
+    padding: 20px;
+    background-color: #a9a9a9;
+    border-radius: 10px;
+    width: 500px;  
+    min-height: 200px; 
+    max-height: 500px; 
+    overflow-y: auto; 
+}
+
+.aviso-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 7px;
+}
+
+.avisos-list {
+    margin-top: 10px;
+}
+
+.aviso-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.aviso-item h3 {
+    margin: 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.aviso-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.mainHome{
+    display: flex;
+    margin-top: 100px;
+    background-color: #EDEDED;
+}
+
+.aviso {
+    text-align: center;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.popup h2 {
+    margin-bottom: 10px;
+}
+
+.popup p {
+    margin-bottom: 20px;
+}
+
+.popup label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.popup button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+
+.eye-icon {
+    margin-left: 2px;
+    cursor: pointer;
+    color: #007bff; 
+}
+
+.eye-icon:hover {
+    color: #0056b3;  
+}

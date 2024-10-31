@@ -1,0 +1,65 @@
+#TopBarGeral {
+    border-bottom: 0.1px solid #ededed;
+    background-color: #5DD55D;
+}
+
+#TopBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1%;
+
+    h1 {
+        margin: 1%;
+    }
+}
+
+.esquerda {
+    display: flex;
+}
+
+.direita {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 28%;
+    gap: 4%;
+    margin-right: 25px;
+}
+
+h1 {
+    color: black;
+}
+
+.back-btn {
+    font-size: 26px !important;
+    font-weight: 900 !important;
+}
+
+.logo-img {
+    width: 28%;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1rem;
+}
+
+.dropdown-menu {
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 0.25rem;
+}
+
+.dropdown-item {
+    color: #000;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+

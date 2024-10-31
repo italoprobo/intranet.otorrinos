@@ -1,0 +1,38 @@
+.cardLogin {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.insidelogin{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #128041;
+    color: white;
+    border-radius: 10%;
+}
+
+#login{
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.otorrinos {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+#email, #senha{
+    width: 300px;
+}
