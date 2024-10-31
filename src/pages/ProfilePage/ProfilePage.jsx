@@ -33,33 +33,39 @@ const ProfilePage = () => {
     const handleImageUpload = async () => {
         if (profileImageFile) {
             const fileName = `${userData.id}-${profileImageFile.name}`;
-            const { error: uploadError } = await supabase.storage
+            const { data, error: uploadError } = await supabase.storage
                 .from('profile-image')
                 .upload(fileName, profileImageFile);
-            
+    
             if (uploadError) {
                 console.error('Erro ao fazer upload da imagem:', uploadError);
             } else {
-                const imageUrl = supabase.storage
+                const { data: publicUrlData } = supabase.storage
                     .from('profile-image')
-                    .getPublicUrl(fileName).publicUrl;
-                    console.log(imageUrl);
-   
-                setProfileImageUrl(imageUrl);
-                
-                const { error: updateError } = await supabase
-                    .from('profiles')
-                    .update({ profile_image_url: imageUrl })
-                    .eq('id', userData.id);
-   
-                if (updateError) {
-                    console.error('Erro ao atualizar o URL da imagem no perfil:', updateError);
+                    .getPublicUrl(fileName);
+    
+                const imageUrl = publicUrlData?.publicUrl;
+                console.log('Public URL gerado:', imageUrl);
+    
+                if (imageUrl) {
+                    setProfileImageUrl(imageUrl);
+    
+                    const { error: updateError } = await supabase
+                        .from('profiles')
+                        .update({ profile_image_url: imageUrl })
+                        .eq('id', userData.id);
+    
+                    if (updateError) {
+                        console.error('Erro ao atualizar o URL da imagem no perfil:', updateError);
+                    } else {
+                        console.log('URL da imagem atualizado com sucesso no perfil:', imageUrl);
+                    }
                 } else {
-                    console.log('URL da imagem atualizado com sucesso no perfil:', imageUrl);
+                    console.error('Erro: URL público não foi gerado.');
                 }
             }
         }
-    };
+    }
 
     const handleSaveProfile = async () => {
         const { error } = await supabase
