@@ -81,32 +81,42 @@ const ProfilePage = () => {
     };
 
 
-    return(
-        <div className='main'>
+    return (
+        <div className="main">
             <Helmet>
                 <title>Otorrinos - Perfil</title>
             </Helmet>
-            <TopBar></TopBar>
-            <div className="content-main">
-            <h1>Perfil</h1>
-            <div>
-                <label>Data de Aniversário</label>
-                <input 
-                    type="date" 
-                    value={birthday} 
-                    onChange={(e) => setBirthday(e.target.value)} 
-                />
-            </div>
-            <div>
-                <label>Imagem de Perfil</label>
-                {profileImageUrl && <img src={profileImageUrl} alt="Profile" width={100} />}
-                <input type="file" onChange={(e) => setProfileImageFile(e.target.files[0])} />
-                <button onClick={handleImageUpload}>Upload Imagem</button>
-            </div>
-            <button onClick={handleSaveProfile}>Salvar Perfil</button>
-        </div>          
+            <TopBar />
+            <div className="contentemain">
+                <div className="title">
+                    <h1>Perfil</h1>
+                </div>
+                <div className="profile-section">
+                    <div className="profile">
+                    <label>Imagem de Perfil</label>
+                    <div className="profile-image-container">
+                        {profileImageUrl ? (
+                            <img src={profileImageUrl} alt="Profile" className="profile-image" />
+                        ) : (
+                            <img src="default-profile.png" alt="Default Profile" className="profile-image" />
+                        )}
+                        <input type="file" onChange={(e) => setProfileImageFile(e.target.files[0])} />
+                        <button onClick={handleImageUpload}>Upload Imagem</button>
+                    </div>
+                    </div>
+                    <div className="aniversary">                        
+                        <label>Data de Aniversário</label>
+                        <input 
+                            type="date" 
+                            value={birthday} 
+                            onChange={(e) => setBirthday(e.target.value)} 
+                        />
+                    </div>
+                </div>
+                    <button onClick={handleSaveProfile}>Salvar Perfil</button>
+            </div>          
         </div>
-    )
+    );
 };
 
 export default ProfilePage;
